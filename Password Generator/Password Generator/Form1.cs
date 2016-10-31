@@ -56,10 +56,39 @@ namespace Password_Generator
                 Clipboard.SetText(password);
             }
         }
+        void LoadNotepad()
+        {
+            try
+            {
+                rtbNotepad.LoadFile("notepad.rtf");
+            }
+            catch
+            {
+                MessageBox.Show("Error: File not loaded");
+            }
+        }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             chlbGenerator.SetItemChecked(2, true);
+            LoadNotepad();
+        }
+
+        private void tsmiSave_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                rtbNotepad.SaveFile("notepad.rtf");
+            }
+            catch
+            {
+                MessageBox.Show("Error: File not saved!");
+            }
+        }
+
+        private void tsmiLoad_Click(object sender, EventArgs e)
+        {
+            LoadNotepad();
         }
     }
 }

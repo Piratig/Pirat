@@ -44,9 +44,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnGenerates = new System.Windows.Forms.Button();
             this.txbPassword = new System.Windows.Forms.TextBox();
+            this.rtbNotepad = new System.Windows.Forms.RichTextBox();
             this.menuStrip1.SuspendLayout();
             this.tclGenerator.SuspendLayout();
             this.tbpGenerator.SuspendLayout();
+            this.tclNotepad.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudLength)).BeginInit();
             this.SuspendLayout();
             // 
@@ -97,14 +99,20 @@
             // tsmiSave
             // 
             this.tsmiSave.Name = "tsmiSave";
-            this.tsmiSave.Size = new System.Drawing.Size(152, 22);
+            this.tsmiSave.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.S)));
+            this.tsmiSave.Size = new System.Drawing.Size(166, 22);
             this.tsmiSave.Text = "Save";
+            this.tsmiSave.Click += new System.EventHandler(this.tsmiSave_Click);
             // 
             // tsmiLoad
             // 
             this.tsmiLoad.Name = "tsmiLoad";
-            this.tsmiLoad.Size = new System.Drawing.Size(152, 22);
+            this.tsmiLoad.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.L)));
+            this.tsmiLoad.Size = new System.Drawing.Size(166, 22);
             this.tsmiLoad.Text = "Load";
+            this.tsmiLoad.Click += new System.EventHandler(this.tsmiLoad_Click);
             // 
             // tsmiAbout
             // 
@@ -141,6 +149,7 @@
             // 
             // tclNotepad
             // 
+            this.tclNotepad.Controls.Add(this.rtbNotepad);
             this.tclNotepad.Location = new System.Drawing.Point(4, 22);
             this.tclNotepad.Name = "tclNotepad";
             this.tclNotepad.Padding = new System.Windows.Forms.Padding(3);
@@ -211,6 +220,15 @@
             this.txbPassword.Size = new System.Drawing.Size(265, 20);
             this.txbPassword.TabIndex = 4;
             // 
+            // rtbNotepad
+            // 
+            this.rtbNotepad.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rtbNotepad.Location = new System.Drawing.Point(3, 3);
+            this.rtbNotepad.Name = "rtbNotepad";
+            this.rtbNotepad.Size = new System.Drawing.Size(278, 217);
+            this.rtbNotepad.TabIndex = 0;
+            this.rtbNotepad.Text = "";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -227,6 +245,7 @@
             this.tclGenerator.ResumeLayout(false);
             this.tbpGenerator.ResumeLayout(false);
             this.tbpGenerator.PerformLayout();
+            this.tclNotepad.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.nudLength)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -251,6 +270,7 @@
         private System.Windows.Forms.Button btnGenerates;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.NumericUpDown nudLength;
+        private System.Windows.Forms.RichTextBox rtbNotepad;
     }
 }
 
