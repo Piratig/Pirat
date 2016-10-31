@@ -53,7 +53,13 @@ namespace Password_Generator
                             break;
                 }
                 txbPassword.Text = password;
+                Clipboard.SetText(password);
             }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            chlbGenerator.SetItemChecked(2, true);
         }
     }
 }
