@@ -180,7 +180,7 @@
             this.nudLength.Size = new System.Drawing.Size(54, 20);
             this.nudLength.TabIndex = 1;
             this.nudLength.Value = new decimal(new int[] {
-            6,
+            8,
             0,
             0,
             0});
@@ -221,6 +221,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "tab";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.tclGenerator.ResumeLayout(false);
